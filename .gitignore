@@ -4,6 +4,7 @@ build/
 gevent.*.[ch]
 gevent/core.pyx
 *.egg-info
+.idea/
 
 doc/changelog.rst
 doc/_build
