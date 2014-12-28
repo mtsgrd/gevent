@@ -62,7 +62,9 @@ class SSLSocket(socket):
                  ssl_version=PROTOCOL_SSLv23, ca_certs=None,
                  do_handshake_on_connect=True,
                  suppress_ragged_eofs=True,
-                 ciphers=None):
+                 ciphers=None,
+                 server_hostname=None,  # Required by python >= 2.7.8
+                 _context=None):  # Required by python >= 2.7.8
         socket.__init__(self, _sock=sock)
 
         if PYPY:
